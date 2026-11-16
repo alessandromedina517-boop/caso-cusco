@@ -5,78 +5,81 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="google" content="notranslate">
 <meta name="robots" content="noindex">
-<title>Expediente confidencial 🔍</title>
-<meta property="og:title" content="Expediente confidencial 🔍">
-<meta property="og:description" content="Caso urgente desde Cusco. Solo tú puedes resolverlo.">
+<title>Un álbum para Larry 📷</title>
+<meta property="og:title" content="Un álbum para Larry 📷">
+<meta property="og:description" content="Desde Cusco, con cariño. Ábrelo con calma.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://alessandromedina517-boop.github.io/caso-cusco/">
 <meta property="og:image" content="https://alessandromedina517-boop.github.io/caso-cusco/bebe.jpg">
-<link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
 <style>
-:root{--mesa:#1f1a16;--manila:#d9bb7f;--papel:#f7f0e2;--tinta:#2d2620;--rojo:#b3261e;--verde:#3f6b4a}
+:root{--fondo:#1c2620;--tapa:#2f4a3a;--oro:#e3c77a;--papel:#fbf6ea;--tinta:#33302a;--acento:#b5553c;--verde:#4f7a5c}
 *{box-sizing:border-box;margin:0}
-body{background:radial-gradient(circle at 50% 0,#3a3029,var(--mesa) 70%) fixed;color:var(--tinta);font-family:'Special Elite',monospace;min-height:100vh;min-height:100dvh;display:flex;padding:30px 16px;overflow-x:hidden}
-@keyframes entra{from{opacity:0;transform:translateY(16px) rotate(-1deg)}to{opacity:1;transform:none}}
+body{background:radial-gradient(circle at 50% 0,#2c3a31,var(--fondo) 70%) fixed;color:var(--tinta);font-family:'Lora',Georgia,serif;min-height:100vh;min-height:100dvh;display:flex;padding:30px 16px;overflow-x:hidden}
+@keyframes entra{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
 @keyframes latir{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
 @keyframes temblar{0%,100%{transform:translateX(0)}25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
-@keyframes estampar{to{opacity:1;transform:translate(-50%,-50%) rotate(-12deg) scale(1)}}
+@keyframes pegar{to{opacity:1;transform:translate(-50%,-50%) rotate(-10deg) scale(1)}}
 @keyframes caer{to{transform:translateY(110vh) rotate(40deg);opacity:.2}}
 
-.carpeta{margin:auto;width:100%;max-width:400px;background:var(--manila);border-radius:4px 8px 8px 8px;padding:44px 24px 32px;text-align:center;position:relative;box-shadow:0 22px 50px rgba(0,0,0,.6);animation:entra .8s ease both}
-.pestana{position:absolute;top:-28px;left:0;background:var(--manila);padding:7px 18px;border-radius:8px 8px 0 0;font-size:.85rem}
-.conf{display:inline-block;border:3px solid var(--rojo);color:var(--rojo);padding:4px 14px;transform:rotate(-6deg);font-size:1.6rem;letter-spacing:.15em;margin-bottom:28px}
-.para{font-size:1.25rem;margin-bottom:6px}
-.de{opacity:.7;margin-bottom:30px}
+/* Tapa del álbum */
+.tapa{margin:auto;width:100%;max-width:380px;aspect-ratio:3/4;background:linear-gradient(135deg,#3a5a46,var(--tapa) 60%,#253b2e);border-radius:6px 14px 14px 6px;box-shadow:0 22px 50px rgba(0,0,0,.6),inset 14px 0 0 rgba(0,0,0,.18);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:30px;color:var(--oro);animation:entra .8s ease both;position:relative}
+.tapa::after{content:"";position:absolute;inset:18px 18px 18px 30px;border:1.5px solid rgba(227,199,122,.45);border-radius:4px;pointer-events:none}
+.tapa .titulo{font-family:'Caveat',cursive;font-size:3.4rem;line-height:1}
+.tapa .para{font-size:1.15rem;margin:18px 0 4px}
+.tapa .de{opacity:.75;font-size:.95rem;margin-bottom:34px}
+.tapa .btn{background:var(--oro);color:var(--tapa);border-color:var(--oro);position:relative;z-index:1}
 
-.hoja{margin:auto;width:100%;max-width:440px;background:var(--papel);border-radius:4px;padding:30px 22px 26px;box-shadow:0 20px 50px rgba(0,0,0,.55);position:relative;text-align:center;animation:entra .6s ease both;background-image:repeating-linear-gradient(transparent 0 31px,rgba(45,38,32,.05) 31px 32px)}
-.barras{position:absolute;top:10px;left:14px;right:14px;display:flex;gap:4px}
-.barras i{flex:1;height:3px;border-radius:2px;background:rgba(45,38,32,.15)}
-.barras i.on{background:var(--rojo)}
-.mini{display:inline-block;border:2px solid var(--rojo);color:var(--rojo);padding:2px 10px;font-size:.8rem;letter-spacing:.2em;transform:rotate(-4deg);margin:8px 0 14px}
-h2{font-size:1.35rem;margin-bottom:14px}
-.etq{font-size:.85rem;letter-spacing:.25em;color:var(--rojo);margin:8px 0 14px}
-.maquina{font-size:1.05rem;line-height:1.55;min-height:3.2em;margin:14px 0 10px;cursor:pointer}
-.foto{position:relative;display:inline-block;background:#fff;padding:8px 8px 34px;box-shadow:0 10px 24px rgba(0,0,0,.25);transform:rotate(-2deg);max-width:88%}
-.foto::before{content:"";position:absolute;top:-12px;left:50%;width:90px;height:24px;margin-left:-45px;background:rgba(217,187,127,.75);transform:rotate(3deg)}
+/* Páginas */
+.hoja{margin:auto;width:100%;max-width:440px;background:var(--papel);border-radius:4px;padding:32px 22px 26px;box-shadow:0 20px 50px rgba(0,0,0,.55);position:relative;text-align:center;animation:entra .6s ease both}
+.barras{position:absolute;top:12px;left:14px;right:14px;display:flex;gap:4px}
+.barras i{flex:1;height:3px;border-radius:2px;background:rgba(51,48,42,.12)}
+.barras i.on{background:var(--acento)}
+.adorno{color:var(--acento);font-size:1.1rem;margin:6px 0 8px}
+h2{font-family:'Caveat',cursive;font-size:2.2rem;font-weight:700;margin-bottom:8px}
+.etq{font-family:'Caveat',cursive;font-size:1.6rem;color:var(--acento);margin:6px 0 14px}
+.texto{font-size:1.05rem;line-height:1.6;min-height:3.2em;margin:16px 0 10px;cursor:pointer}
+.foto{position:relative;display:inline-block;background:#fff;padding:8px 8px 36px;box-shadow:0 10px 24px rgba(0,0,0,.2);transform:rotate(-2deg);max-width:88%}
+.foto::before{content:"";position:absolute;top:-12px;left:50%;width:90px;height:24px;margin-left:-45px;background:rgba(181,85,60,.35);transform:rotate(3deg)}
 .foto img{display:block;width:100%;max-height:320px;object-fit:cover}
-.foto figcaption{position:absolute;bottom:6px;left:0;right:0;font-family:'Caveat',cursive;font-size:1.3rem}
-.preg{font-size:1.1rem;font-weight:bold;margin:6px 0 10px}
+.foto figcaption{position:absolute;bottom:6px;left:0;right:0;font-family:'Caveat',cursive;font-size:1.35rem}
+.preg{font-size:1.1rem;font-weight:600;margin:6px 0 10px}
 .ops{display:flex;flex-direction:column;gap:8px}
-.op{font:inherit;font-size:1rem;background:#fff;border:2px solid var(--tinta);border-radius:6px;padding:10px;cursor:pointer;color:var(--tinta)}
+.op{font:inherit;font-size:1rem;background:#fff;border:2px solid #d9cfbd;border-radius:10px;padding:11px;cursor:pointer;color:var(--tinta)}
 .op.bien{background:var(--verde);border-color:var(--verde);color:#fff}
-.op.mal{border-color:var(--rojo);color:var(--rojo);opacity:.6;animation:temblar .35s}
-#resp{font-family:'Caveat',cursive;font-size:1.45rem;color:var(--rojo);min-height:1.5em;margin-top:10px}
-.btn{display:inline-block;font:inherit;font-size:1rem;text-decoration:none;background:var(--tinta);color:var(--papel);border:2px solid var(--tinta);border-radius:999px;padding:12px 28px;margin:8px 4px 0;cursor:pointer}
+.op.mal{border-color:var(--acento);color:var(--acento);opacity:.6;animation:temblar .35s}
+#resp{font-family:'Caveat',cursive;font-size:1.5rem;color:var(--acento);min-height:1.5em;margin-top:10px}
+.btn{display:inline-block;font:inherit;font-size:1rem;text-decoration:none;background:var(--tapa);color:var(--papel);border:2px solid var(--tapa);border-radius:999px;padding:12px 28px;margin:8px 4px 0;cursor:pointer}
 .btn.pulsa{animation:latir 1.4s infinite}
-.btn.sec{background:transparent;color:var(--tinta)}
+.btn.sec{background:transparent;color:var(--tapa)}
 .oculto{display:none!important}
 
-.marco{position:relative;width:100%;aspect-ratio:4/3;background:#111;border:8px solid #fff;box-shadow:0 10px 24px rgba(0,0,0,.3);overflow:hidden}
+/* La foto que falta */
+.marco{position:relative;width:100%;aspect-ratio:4/3;background:#111;border:8px solid #fff;box-shadow:0 10px 24px rgba(0,0,0,.25);overflow:hidden}
 .marco img{width:100%;height:100%;object-fit:contain;display:block}
 #raspa{position:absolute;inset:0;width:100%;height:100%;touch-action:none;transition:opacity .8s ease}
-.estampa{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%) rotate(-12deg) scale(3);opacity:0;border:4px solid var(--rojo);color:var(--rojo);padding:6px 14px;font-size:1.5rem;letter-spacing:.1em;background:rgba(247,240,226,.8);white-space:nowrap;pointer-events:none}
-.estampa.on{animation:estampar .5s cubic-bezier(.3,1.4,.5,1) forwards}
-.estampa.fija{position:static;display:inline-block;opacity:1;transform:rotate(-8deg);margin:6px 0 12px}
+.sticker{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%) rotate(-10deg) scale(3);opacity:0;background:var(--oro);color:var(--tapa);font-family:'Caveat',cursive;font-weight:700;font-size:1.8rem;padding:6px 20px;border-radius:999px;box-shadow:0 6px 16px rgba(0,0,0,.35);white-space:nowrap;pointer-events:none}
+.sticker.on{animation:pegar .5s cubic-bezier(.3,1.4,.5,1) forwards}
 
-.tio{font-family:'Caveat',cursive;font-size:3rem;color:var(--rojo);line-height:1.1;margin:6px 0}
-.sub{font-size:1.05rem;line-height:1.5;margin-bottom:10px}
+/* Final */
+.tio{font-family:'Caveat',cursive;font-size:3.2rem;color:var(--acento);line-height:1.1;margin:4px 0 8px}
+.sub{font-size:1.05rem;line-height:1.55;margin-bottom:10px}
 .cuenta{font-family:'Caveat',cursive;font-size:1.5rem;color:var(--verde);margin-bottom:6px}
-.carta{font-family:'Caveat',cursive;font-size:1.4rem;line-height:1.35;text-align:left;background:#fff;padding:18px;margin:14px 0 10px;border-radius:4px;box-shadow:0 6px 18px rgba(45,38,32,.18);transform:rotate(-.6deg);white-space:pre-line}
-.firma{font-family:'Caveat',cursive;font-size:1.5rem;color:var(--rojo);margin-bottom:18px}
+.carta{font-family:'Caveat',cursive;font-size:1.4rem;line-height:1.35;text-align:left;background:#fff;padding:18px;margin:14px 0 10px;border-radius:4px;box-shadow:0 6px 18px rgba(51,48,42,.15);transform:rotate(-.6deg);white-space:pre-line}
+.firma{font-family:'Caveat',cursive;font-size:1.5rem;color:var(--acento);margin-bottom:18px}
 .lluvia{position:fixed;top:-40px;pointer-events:none;z-index:9;animation:caer linear forwards}
 </style>
 </head>
 <body>
 
-<section class="carpeta" id="intro">
-  <div class="pestana">CASO N.° 0523-2027</div>
-  <p class="conf">CONFIDENCIAL</p>
+<section class="tapa" id="intro">
+  <p class="titulo">Recuerdos</p>
   <p class="para" id="pPara"></p>
-  <p class="de">Remitente: Cusco</p>
-  <button class="btn pulsa" id="abrir">Abrir expediente 🔍</button>
+  <p class="de">Desde Cusco, con cariño</p>
+  <button class="btn pulsa" id="abrir">Abrir el álbum 📷</button>
 </section>
 
-<main id="caso" class="oculto" style="margin:auto;width:100%;max-width:440px"></main>
+<main id="album" class="oculto" style="margin:auto;width:100%;max-width:440px"></main>
 <audio id="musica" src="cancion.mp3" loop></audio>
 
 <script>
@@ -92,33 +95,33 @@ const C = {
 
 En esa foto yo era un bebé y tú ya me cargabas con esa sonrisa. No me acuerdo de ese día, pero sí de todo lo que vino después: cada vez que necesité a alguien, estabas.
 
-Estuviste el día de mi ascenso, en las salidas, en todo. Ahora tú estás en Lima y yo en Cusco, pero quería que te enteraras así, como un caso que solo tú podías resolver.
+Estuviste el día de mi ascenso, en las salidas, en todo. Ahora tú estás en Lima y yo en Cusco, pero quería que te enteraras así, con nuestras fotos.
 
 Ahora te toca a ti cargar a un bebé otra vez.`
 };
 
 const pasos = [
-  {tipo:"texto", titulo:"Caso N.° 0523-2027",
-   texto:"{H}, desde Cusco se reporta un caso que solo tú puedes resolver. Revisa cada evidencia con cuidado y responde las preguntas.",
-   boton:"Aceptar el caso"},
-  {tipo:"evidencia", letra:"A", foto:"bebe.jpg", fecha:"Hace muchos años…",
+  {tipo:"texto", titulo:"Un álbum para ti",
+   texto:"{H}, desde Cusco te mando unos recuerdos. Mira cada foto con calma y responde lo que te pregunte.",
+   boton:"Empezar"},
+  {tipo:"foto", etq:"Recuerdo 1", foto:"bebe.jpg", pie:"Hace muchos años…",
    texto:"Un joven muy sonriente carga a un bebé vestido de marinerito.",
    pregunta:"¿Quién es ese bebé?",
    opciones:[["Mi hermanito",1],["Un sobrino",0],["Ni idea",0]],
-   ok:"Correcto. Era yo. Y tú ya me estabas cuidando.",
+   ok:"Sí, era yo. Y tú ya me estabas cuidando.",
    mal:"Mírale bien los cachetes… ¡era yo! 😄"},
-  {tipo:"evidencia", letra:"B", foto:"ascenso.jpg", fecha:"El día de mi ascenso",
-   texto:"El bebé creció… y se hizo policía.",
+  {tipo:"foto", etq:"Recuerdo 2", foto:"ascenso.jpg", pie:"El día de mi ascenso",
+   texto:"Ese bebé creció… y se hizo policía.",
    pregunta:"¿Quién estaba a su lado ese día?",
    opciones:[["Yo, obvio",1],["Nadie",0],["Un desconocido",0]],
    ok:"Exacto. Como siempre, ahí estabas.",
-   mal:"Revisa la foto otra vez 😏"},
-  {tipo:"evidencia", letra:"C", foto:"salida.jpg", fecha:"Una noche cualquiera",
-   texto:"Testigos confirman que siguen saliendo juntos, aunque ahora los separen más de mil kilómetros entre Lima y Cusco.",
-   boton:"Siguiente"},
-  {tipo:"texto", titulo:"Última pista",
-   texto:"La historia se repite. El que una vez cargó a un bebé… pronto va a cargar a otro.",
-   boton:"Ver la evidencia final"},
+   mal:"Mira la foto otra vez 😏"},
+  {tipo:"foto", etq:"Recuerdo 3", foto:"salida.jpg", pie:"Una noche cualquiera",
+   texto:"Y aunque ahora nos separen más de mil kilómetros entre Lima y Cusco, seguimos siendo los mismos.",
+   boton:"Pasar la página"},
+  {tipo:"texto", titulo:"Una página más",
+   texto:"Esta página del álbum todavía está vacía. La historia se repite: el que una vez cargó a un bebé… pronto va a cargar a otro.",
+   boton:"Ver la foto que falta"},
   {tipo:"raspa"},
   {tipo:"final"}
 ];
@@ -127,7 +130,7 @@ const $ = id => document.getElementById(id);
 const t = s => s.replaceAll("{H}", C.hermano);
 let paso = 0, tecla;
 
-$("pPara").textContent = "Para: " + C.hermano;
+$("pPara").textContent = "Para " + C.hermano;
 pasos.forEach(p => { if (p.foto) new Image().src = p.foto; });
 new Image().src = "ecografia.jpg";
 
@@ -151,42 +154,41 @@ function mostrar(i){
   let h = `<div class="barras">${pasos.map((_, n) => `<i class="${n <= i ? "on" : ""}"></i>`).join("")}</div>`;
 
   if (p.tipo === "texto") {
-    h += `<p class="mini">CONFIDENCIAL</p><h2>${t(p.titulo)}</h2>
-          <p class="maquina" id="maq"></p>
+    h += `<p class="adorno">♥</p><h2>${t(p.titulo)}</h2>
+          <p class="texto" id="txt"></p>
           <button class="btn oculto" id="sig">${p.boton}</button>`;
   }
-  if (p.tipo === "evidencia") {
-    h += `<p class="etq">EVIDENCIA ${p.letra}</p>
-          <figure class="foto"><img src="${p.foto}" alt=""><figcaption>${p.fecha}</figcaption></figure>
-          <p class="maquina" id="maq"></p>
+  if (p.tipo === "foto") {
+    h += `<p class="etq">${p.etq}</p>
+          <figure class="foto"><img src="${p.foto}" alt=""><figcaption>${p.pie}</figcaption></figure>
+          <p class="texto" id="txt"></p>
           <div id="preg" class="oculto">${p.pregunta ? `<p class="preg">${p.pregunta}</p><div class="ops" id="ops"></div><p id="resp"></p>` : ""}</div>
-          <button class="btn oculto" id="sig">${p.boton || "Siguiente evidencia"}</button>`;
+          <button class="btn oculto" id="sig">${p.boton || "Siguiente recuerdo"}</button>`;
   }
   if (p.tipo === "raspa") {
-    h += `<p class="etq">EVIDENCIA FINAL</p>
-          <div class="marco"><img src="ecografia.jpg" alt=""><canvas id="raspa"></canvas><span class="estampa" id="estampa">CASO RESUELTO</span></div>
-          <p class="maquina">Raspa con tu dedo para revelar la evidencia.</p>`;
+    h += `<p class="etq">La foto que falta</p>
+          <div class="marco"><img src="ecografia.jpg" alt=""><canvas id="raspa"></canvas><span class="sticker" id="sticker">♥ Nuevo integrante ♥</span></div>
+          <p class="texto">Raspa con tu dedo para verla.</p>`;
   }
   if (p.tipo === "final") {
     const dias = Math.ceil((new Date(C.fechaParto + "T00:00:00") - new Date()) / 864e5);
     const wa = "https://wa.me/" + C.whatsapp + "?text=";
-    h += `<span class="estampa fija">CASO RESUELTO</span>
-          <p class="etq">VEREDICTO</p>
+    h += `<p class="adorno">♥ ♥ ♥</p>
           <h1 class="tio">¡Vas a ser tío!</h1>
           <p class="sub">${C.yo} y ${C.novia} vamos a ser papás.<br>Y ${C.perro} va a ser hermano mayor.</p>
           <p class="cuenta">Llega en ${C.mesParto}${dias > 0 ? ` · faltan unos ${dias} días` : ""}</p>
           <div class="carta">${t(C.carta)}</div>
           <p class="firma">Tu ${C.yo}, ${C.novia} y ${C.perro}</p>
           <p class="preg">¿Qué crees que será?</p>
-          <a class="btn" target="_blank" rel="noopener" href="${wa + encodeURIComponent("¡Caso resuelto! 😭💛 Yo digo que será niño 💙")}">Niño 💙</a>
-          <a class="btn" target="_blank" rel="noopener" href="${wa + encodeURIComponent("¡Caso resuelto! 😭💛 Yo digo que será niña 💗")}">Niña 💗</a>
+          <a class="btn" target="_blank" rel="noopener" href="${wa + encodeURIComponent("¡Ya vi el álbum! 😭💛 Yo digo que será niño 💙")}">Niño 💙</a>
+          <a class="btn" target="_blank" rel="noopener" href="${wa + encodeURIComponent("¡Ya vi el álbum! 😭💛 Yo digo que será niña 💗")}">Niña 💗</a>
           <p><button class="btn sec" id="otra">Ver de nuevo</button></p>`;
   }
 
-  $("caso").innerHTML = `<article class="hoja">${h}</article>`;
+  $("album").innerHTML = `<article class="hoja">${h}</article>`;
 
-  if (p.tipo === "texto" || p.tipo === "evidencia") {
-    escribir($("maq"), t(p.texto), () => {
+  if (p.tipo === "texto" || p.tipo === "foto") {
+    escribir($("txt"), t(p.texto), () => {
       if (p.pregunta) { $("preg").classList.remove("oculto"); opciones(p); }
       else $("sig").classList.remove("oculto");
     });
@@ -235,14 +237,14 @@ function prepararRaspa(){
   x.fillStyle = "rgba(255,255,255,.3)";
   for (let n = 0; n < 50; n++) {
     x.font = `${(12 + Math.random() * 16) * dpr}px serif`;
-    x.fillText("?", Math.random() * cv.width, Math.random() * cv.height);
+    x.fillText("♥", Math.random() * cv.width, Math.random() * cv.height);
   }
   x.fillStyle = "#4a3412";
   x.textAlign = "center";
-  x.font = `${24 * dpr}px 'Special Elite', monospace`;
-  x.fillText("RASPA AQUÍ", cv.width / 2, cv.height / 2);
-  x.font = `${14 * dpr}px 'Special Elite', monospace`;
-  x.fillText("evidencia final", cv.width / 2, cv.height / 2 + 26 * dpr);
+  x.font = `700 ${32 * dpr}px Caveat, cursive`;
+  x.fillText("Raspa aquí", cv.width / 2, cv.height / 2);
+  x.font = `${15 * dpr}px Lora, Georgia, serif`;
+  x.fillText("la foto que falta", cv.width / 2, cv.height / 2 + 28 * dpr);
 
   let on = false, listo = false, lx = 0, ly = 0;
   const pt = e => { const r = cv.getBoundingClientRect(), d = cv.width / r.width; return [(e.clientX - r.left) * d, (e.clientY - r.top) * d]; };
@@ -274,7 +276,7 @@ function prepararRaspa(){
       listo = true;
       cv.style.opacity = 0;
       setTimeout(() => {
-        $("estampa").classList.add("on");
+        $("sticker").classList.add("on");
         if (navigator.vibrate) navigator.vibrate(150);
       }, 900);
       setTimeout(() => mostrar(paso + 1), 3200);
@@ -283,27 +285,3 @@ function prepararRaspa(){
 }
 
 function lluvia(){
-  const colores = ["#b3261e", "#3f6b4a", "#d9bb7f"];
-  for (let n = 0; n < 46; n++) {
-    const s = document.createElement("span");
-    s.className = "lluvia";
-    s.textContent = n % 4 ? "♥" : "🍼";
-    s.style.left = Math.random() * 100 + "vw";
-    s.style.fontSize = 14 + Math.random() * 20 + "px";
-    s.style.color = colores[n % 3];
-    s.style.animationDuration = 3 + Math.random() * 3 + "s";
-    s.style.animationDelay = Math.random() * 3 + "s";
-    document.body.appendChild(s);
-    setTimeout(() => s.remove(), 9500);
-  }
-}
-
-$("abrir").onclick = () => {
-  $("musica").play().catch(() => {});
-  $("intro").remove();
-  $("caso").classList.remove("oculto");
-  mostrar(0);
-};
-</script>
-</body>
-</html>
