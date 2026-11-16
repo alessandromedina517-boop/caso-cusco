@@ -22,14 +22,12 @@ body{background:linear-gradient(#fbf7f0,#f8efe8 45%,#eef2ea);color:var(--tinta);
 @keyframes flotar{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
 @keyframes lluvia{to{transform:translateY(110vh) rotate(40deg);opacity:.2}}
 
-/* Portada */
 #portada{position:fixed;inset:0;z-index:20;background:var(--crema);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:30px;cursor:pointer;transition:opacity 1s ease}
 #portada.fuera{opacity:0;pointer-events:none}
 #portada svg{width:150px;animation:flotar 3s ease-in-out infinite}
 #portada .para{font-family:'Great Vibes',cursive;font-size:3.4rem;color:var(--rubor);margin-top:6px}
 #portada .toca{font-size:.8rem;letter-spacing:.3em;text-transform:uppercase;color:var(--oro);margin-top:14px;animation:latir 1.6s infinite}
 
-/* Pétalos */
 .petalo{position:fixed;top:0;z-index:0;pointer-events:none;border-radius:80% 0 80% 0;opacity:.55;animation:caer linear infinite}
 
 .pagina{position:relative;z-index:1;max-width:480px;margin:0 auto;padding:0 22px 70px;text-align:center}
@@ -39,7 +37,7 @@ body{background:linear-gradient(#fbf7f0,#f8efe8 45%,#eef2ea);color:var(--tinta);
 .guirnalda{display:block;width:calc(100% + 44px);margin:0 -22px}
 .curva{display:block;width:100%;margin-top:-26px}
 .nombre{display:flex;align-items:center;justify-content:center;font-family:'Great Vibes',cursive;font-size:5.6rem;line-height:1;color:#ecc7bb;margin-top:-34px}
-.nombre svg{width:118px;margin:0 -14px;position:relative;z-index:1;animation:flotar 3.4s ease-in-out infinite}
+.nombre svg{width:110px;margin:0 2px;position:relative;z-index:1;animation:flotar 3.4s ease-in-out infinite}
 .desde{font-size:.78rem;letter-spacing:.28em;text-transform:uppercase;color:var(--oro);margin-top:8px}
 
 .player{margin:22px auto 6px;width:86%}
@@ -106,7 +104,6 @@ body{background:linear-gradient(#fbf7f0,#f8efe8 45%,#eef2ea);color:var(--tinta);
 </head>
 <body>
 
-<!-- Dibujo de la llamita (se reutiliza) -->
 <svg width="0" height="0" style="position:absolute">
   <symbol id="llama" viewBox="0 0 120 140">
     <g fill="#f3e6d0"><rect x="38" y="112" width="9" height="20" rx="4"/><rect x="51" y="114" width="9" height="20" rx="4"/><rect x="66" y="114" width="9" height="20" rx="4"/><rect x="79" y="112" width="9" height="20" rx="4"/></g>
@@ -144,8 +141,8 @@ body{background:linear-gradient(#fbf7f0,#f8efe8 45%,#eef2ea);color:var(--tinta);
     <path id="rama" d="M0 8 Q100 75 200 22 T400 8" fill="none" stroke="#a9b8a2" stroke-width="1.5"/>
   </svg>
   <svg class="curva" viewBox="0 0 400 130" aria-hidden="true">
-    <path id="arcoTxt" d="M30 122 Q200 -18 370 122" fill="none"/>
-    <text font-family="Quicksand" font-weight="700" font-size="21" letter-spacing="3" fill="#e2a99c">
+    <path id="arcoTxt" d="M10 125 Q200 -40 390 125" fill="none"/>
+    <text font-family="Quicksand" font-weight="700" font-size="17" letter-spacing="2" fill="#e2a99c">
       <textPath href="#arcoTxt" startOffset="50%" text-anchor="middle">TENEMOS UNA NOTICIA PARA TI</textPath>
     </text>
   </svg>
@@ -222,7 +219,7 @@ body{background:linear-gradient(#fbf7f0,#f8efe8 45%,#eef2ea);color:var(--tinta);
 <script>
 const C = {
   hermano: "Larry",
-  yo: "Nerito",
+  yo: "Bryan",
   novia: "Mary Cielo",
   perro: "Drako",
   fechaParto: "2027-05-23",
@@ -241,7 +238,6 @@ const MESES = ["enero","febrero","marzo","abril","mayo","junio","julio","agosto"
 const DIAS = ["Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado"];
 const parto = new Date(C.fechaParto + "T00:00:00");
 
-/* Textos */
 $("pPara").textContent = "Para " + C.hermano;
 const corte = Math.ceil(C.hermano.length / 2);
 $("n1").textContent = C.hermano.slice(0, corte);
@@ -254,7 +250,6 @@ const wa = "https://wa.me/" + C.whatsapp + "?text=";
 $("nino").href = wa + encodeURIComponent("¡Ya lo vi! 😭🤍 Yo digo que será niño 💙");
 $("nina").href = wa + encodeURIComponent("¡Ya lo vi! 😭🤍 Yo digo que será niña 💗");
 
-/* Guirnalda con hojas y flores */
 (function(){
   const g = $("guirnalda"), rama = $("rama"), largo = rama.getTotalLength(), NS = "http://www.w3.org/2000/svg";
   for (let n = 0; n <= 34; n++) {
@@ -281,7 +276,6 @@ $("nina").href = wa + encodeURIComponent("¡Ya lo vi! 😭🤍 Yo digo que será
   }
 })();
 
-/* Pétalos cayendo */
 const colores = ["#f0c4b8", "#dfe7da", "#f6dcd3", "#c3d1bd"];
 for (let n = 0; n < 18; n++) {
   const p = document.createElement("div");
@@ -295,11 +289,9 @@ for (let n = 0; n < 18; n++) {
   document.body.appendChild(p);
 }
 
-/* Aparecer al bajar */
 const obs = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("visto"); obs.unobserve(e.target); } }), {threshold: .15});
 document.querySelectorAll(".rev").forEach(el => obs.observe(el));
 
-/* Música */
 const audio = $("musica");
 audio.addEventListener("error", () => $("player").style.display = "none");
 audio.addEventListener("play", () => $("play").textContent = "❚❚");
@@ -312,7 +304,6 @@ $("portada").onclick = () => {
   audio.play().catch(() => {});
 };
 
-/* Fecha y calendario */
 $("fMes").textContent = MESES[parto.getMonth()].toUpperCase();
 $("fDia").textContent = DIAS[parto.getDay()].toUpperCase();
 $("fNum").textContent = parto.getDate();
@@ -328,7 +319,6 @@ $("calTitulo").textContent = (MESES[parto.getMonth()] + " " + parto.getFullYear(
   $("grid").innerHTML = h;
 })();
 
-/* Cuenta regresiva */
 const dos = n => String(n).padStart(2, "0");
 function contar(){
   let s = Math.max(0, Math.floor((parto - new Date()) / 1000));
@@ -339,7 +329,6 @@ function contar(){
 }
 contar(); setInterval(contar, 1000);
 
-/* La sorpresa */
 function lluvia(){
   const c = ["#e2a99c", "#8fa58a", "#e8b84a", "#f0c4b8"];
   for (let n = 0; n < 50; n++) {
